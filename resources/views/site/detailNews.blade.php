@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 <div class="back_button">
-    <img src="{{asset('public/images/left-arrow.png')}}" alt="">
+    <img src="{{asset('public/img/left-arrow.png')}}" alt="">
     <a href="/news">ко всем новостям</a>
 </div>
 <div class="top_block">
@@ -26,7 +26,7 @@
         {{-- <div class="box_smoll"></div> --}}
         <div class="recommendet_articles"></div>
         <img 
-        src="{{ asset('images/' . $news->image) }}" 
+        src="{{ asset('public/images/' . $news->image) }}" 
         alt=""
         class="">
         <div class="box_big"></div>
