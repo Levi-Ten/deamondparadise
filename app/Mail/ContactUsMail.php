@@ -31,11 +31,12 @@ class ContactUsMail extends Mailable
     {
         $data = $this->credentials;
         return $this->from($data['email'])
-        ->subject('Got an email')
+        ->subject('Запись клиентов')
         ->markdown('emails.contactUs')
         ->with([
             'subject' => $data['subject'],
             'name' => $data['name'],
+            'email' => $data['email'],
             'teleph'=>$data['teleph'],
         ]);
     }

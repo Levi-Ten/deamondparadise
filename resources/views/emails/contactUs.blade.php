@@ -29,6 +29,7 @@
             <h2 class="title">Письмо с сайта beauty</h2>
         </div>
         <span>Имя:</span>{{ $name }}<br><br>
+        <span>Email:</span>{{ $email }}<br><br>
         <span>Телефон:</span><br>{{ $teleph }}<br><br>
         <span>Сообщение:</span><br>{{ $subject }}
     </div>
