@@ -39,7 +39,7 @@
             НОГТЕВОЙ СЕРВИС
         </span>
         <span class="btn" data-tab="#tab_2">
-            <img src="{{asset('img/salon.png')}}" alt="">
+            <img src="{{asset('public/img/salon.png')}}" alt="">
             ПАРИКМАХЕРСКИЙ ЗАЛ
         </span>
         <span class="btn" data-tab="#tab_3">
