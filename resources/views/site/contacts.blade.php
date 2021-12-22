@@ -19,10 +19,7 @@
         </div>
     </form>
 </div>
-
-
 <div class="contac_block">
-
 </div>
 </div>
 
@@ -31,4 +28,3 @@
 
 
 
-{{-- <div class="shadow_bottom"></div> --}}

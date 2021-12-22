@@ -12,7 +12,7 @@
         <div class="news_list_detail">
             <div class="news_images">
                 <img 
-                 src="{{ asset('images/' . $news->image) }}" 
+                 src="{{ asset('public/images/' . $news->image) }}" 
                  alt=""> 
                  <div class="read_more_text news_page">
                     <span>читать эту статью</span>

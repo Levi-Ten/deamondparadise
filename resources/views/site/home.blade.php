@@ -19,7 +19,7 @@
     </div>
  
     <div class="baner_images" >
-        <img class="banner_images" src="{{asset('img/home-second-images.jpeg')}}" alt="">
+        <img class="banner_images" src="{{asset('public/img/home-second-images.jpeg')}}" alt="">
     </div>
 
     {{-- ==========animation rain============= --}}
@@ -61,7 +61,7 @@
     </div>
     <div class="card">
         <div class="card_images">
-            <img src="{{asset('img/makeup.jpeg')}}" alt="makeup photo girl">
+            <img src="{{asset('public/img/makeup.jpeg')}}" alt="makeup photo girl">
         </div>
         
         <div class="card_description">
@@ -82,7 +82,7 @@
 {{-- ---------------------------- --}}
     <div class="card">
         <div class="card_images">
-            <img src="{{asset('img/stylist-services2.jpeg')}}" alt="stylist services">
+            <img src="{{asset('public/img/stylist-services2.jpeg')}}" alt="stylist services">
         </div>
         
         <div class="card_description">
@@ -104,7 +104,7 @@
 {{-- ------------------------------------- --}}
     <div class="card">
         <div class="card_images">
-            <img src="{{asset('img/coloring.jpeg')}}" alt="">
+            <img src="{{asset('public/img/coloring.jpeg')}}" alt="">
         </div>
         
         <div class="card_description">
@@ -142,7 +142,7 @@
        <div class="home_news_image">
         <a href="{{ route('news.detailNews', $news) }}">
             <img 
-            src="{{ asset('images/' . $news->image) }}" 
+            src="{{ asset('public/images/' . $news->image) }}" 
             alt="">
         </a>
         

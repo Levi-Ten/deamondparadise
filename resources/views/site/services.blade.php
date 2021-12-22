@@ -13,7 +13,7 @@
                 <span class="description">{{$price->service}}</span>
                 <span class="price">
                     {{$price->price}} $
-                    <img src="{{asset('img/check.png')}}" alt="">
+                    <img src="{{asset('public/img/check.png')}}" alt="">
                 </span>
             </div>
         </div>
@@ -35,7 +35,7 @@
 <div class="block_serv">
 <div class="block_serv_menu">
         <span class="btn active" data-tab="#tab_1">
-            <img src="{{asset('img/manicure.png')}}" alt="">
+            <img src="{{asset('public/img/manicure.png')}}" alt="">
             НОГТЕВОЙ СЕРВИС
         </span>
         <span class="btn" data-tab="#tab_2">
@@ -43,11 +43,11 @@
             ПАРИКМАХЕРСКИЙ ЗАЛ
         </span>
         <span class="btn" data-tab="#tab_3">
-            <img src="{{asset('img/cosmetology.png')}}" alt="">
+            <img src="{{asset('public/img/cosmetology.png')}}" alt="">
             КОСМЕТОЛОГИЯ
         </span>
         <span class="btn" data-tab="#tab_4">
-            <img src="{{asset('img/make-up.png')}}" alt="">
+            <img src="{{asset('public/img/make-up.png')}}" alt="">
             MAKE UP
         </span>
 </div>
@@ -57,7 +57,7 @@
 <div class="block_desc active" id="tab_1">
     <div class="row">
 <div class="desc_img">
-    <img src="{{asset('img/nails-service.png')}}" alt="">
+    <img src="{{asset('public/img/nails-service.png')}}" alt="">
     <div class="descript">
         <h3>НОГТЕВОЙ СЕРВИС</h3>
         <span>Красивые и ухоженные руки и ногти – это не дань моде или роскошь, а мечта каждой женщины и непременное условие законченного образа современного человека.
@@ -84,7 +84,7 @@
 <div class="block_desc" id="tab_2">
     <div class="row">
     <div class="desc_img">
-        <img src="{{asset('img/salon-service.png')}}" alt="">
+        <img src="{{asset('public/img/salon-service.png')}}" alt="">
         <div class="descript">
             <h3>ПАРИКМАХЕРСКИЙ ЗАЛ</h3>
             <span>Подходящая под образ и настроение человека причёска способна сильно преобразить его мироощущение. Так, элегантная стрижка однозначно станет заметной изюминкой вашего образа, значительно улучшив его. 
@@ -108,7 +108,7 @@
 <div class="block_desc" id="tab_3">
     <div class="row">
         <div class="desc_img">
-            <img src="{{asset('img/cosmetology-service.png')}}" alt="">
+            <img src="{{asset('public/img/cosmetology-service.png')}}" alt="">
             <div class="descript">
                 <h3>КОСМЕТОЛОГИЯ</h3>
                 <span>Сохранить свою красоту, посещая приятные во всех смыслах сеансы – легкое и одновременно мудрое решение для деловых людей и тех, кто ценит себя и свое время.
@@ -132,7 +132,7 @@
 <div class="block_desc" id="tab_4">
     <div class="row">
         <div class="desc_img">
-            <img src="{{asset('img/make-up-service.png')}}" alt="">
+            <img src="{{asset('public/img/make-up-service.png')}}" alt="">
             <div class="descript">
                 <h3>MAKE UP</h3>
                 <span>Повседневный макияж, или макияж для особых торжеств: светских раутов, подиумный макияж, для фотосессии – каждый случай уникален. Мы беспрестанно транслируем идею гармонии и красоты и уверены, что даже с повседневным макияжем каждая женщина должна выглядеть сногсшибательно.
