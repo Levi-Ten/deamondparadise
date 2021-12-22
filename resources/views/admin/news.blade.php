@@ -35,7 +35,7 @@
                         <a href="{{ route('news.show', $news) }}">
                            {{ $news->image }} 
                            <img 
-                           src="{{ asset('images/' . $news->image) }}" 
+                           src="{{ asset('public/images/' . $news->image) }}" 
                            alt=""
                            class="img-thumbnail w-50">
                         </a>

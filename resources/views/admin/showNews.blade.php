@@ -18,7 +18,7 @@
             <li class="list-group-item">News: {{$news->description}}</li>
             <li class="list-group-item">Image: {{$news->image}}
                 <img 
-                src="{{ asset('images/' . $news->image) }}" 
+                src="{{ asset('images/images/' . $news->image) }}" 
                 alt=""
                 class="w-25"><br>
             </li>
