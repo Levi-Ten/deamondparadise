@@ -11,7 +11,8 @@
     <meta property="og:title" content="beauty salon - сайт для женщин: красота, здоровье, fashion, makeup">
     <meta property="og:description" content="<p>Вдохновляйся работами бьюти-мастеров, общайся на любую тему красоты, узнавай первой о новых тендециях в красоте, новинках косметических производителей</p>">
     <title>Салон красоты в центре Москвы | makeup, чистка лица, парикмахерская.</title>
-    <link rel="icon" type="image/x-icon" href="{{asset('public/img/icons.png')}}">
+    {{-- <link rel="icon" type="image/x-icon" href="{{asset('public/img/icons.png')}}"> --}}
+    <link rel="icon" href="{{ url('public/img/icons.png') }}">
     <link rel="stylesheet" href="{{ asset("public/css/app.css") }}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
    
