@@ -8,6 +8,7 @@ use App\Models\Price;
 use App\Models\Admin;
 use App\Http\Requests\UpdatePriceRequest;
 use App\Http\Requests\StorePriceRequest;
+use Illuminate\Support\Facades\Auth;
 
 
 class PriceController extends Controller
@@ -19,11 +20,13 @@ class PriceController extends Controller
      */
     public function index()
     {
-        $prices = Price::all();
-        $loggedUserInfo = Admin::where('id','=', session('LoggedUser'))->first();
-        return view('admin.dashboard',  compact('prices', 'loggedUserInfo'));
-       //return view('site.services', compact('prices'));
+//        $prices = Price::all();
+        $prices = Price::withSum('discounts', 'discount')->get();
+        $loggedUserInfo = Admin::where('id', '=', session('LoggedUser'))->first();
+        return view('admin.dashboard', compact('prices', 'loggedUserInfo'));
+        //return view('site.services', compact('prices'));
     }
+
     /**
      * Display a listing of the resource.
      *
@@ -32,9 +35,9 @@ class PriceController extends Controller
     public function service()
     {
         $prices = Price::paginate(10);
-       return view('site.services', compact('prices'));
-       
+        return view('site.services', compact('prices'));
     }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -48,19 +51,19 @@ class PriceController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(StorePriceRequest $request)
     {
         Price::create($request->only(['service', 'price']));
-        return redirect()->route('prices.index')->withSuccess('Created user '.$request->name);
+        return redirect()->route('prices.index')->withSuccess('Created user ' . $request->name);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show(Price $price)
@@ -71,38 +74,38 @@ class PriceController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit(Price $price)
     {
         return view('admin.form', compact('price'));
-    
+
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(UpdatePriceRequest $request, Price $price)
     {
         $price->update($request->only(['service', 'price']));
-        return redirect()->route('prices.index')->withSuccess('Updated price '.$price->service);
+        return redirect()->route('prices.index')->withSuccess('Updated price ' . $price->service);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy(Price $price)
     {
         $price->delete();
-        return redirect()->route('prices.index')->withDanger('Deleted user '.$price->service);
+        return redirect()->route('prices.index')->withDanger('Deleted user ' . $price->service);
     }
-    
+
 }

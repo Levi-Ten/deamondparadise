@@ -6,18 +6,20 @@
     <span class="news_title">price list</span>
 </div>
 <div class="price_list">
-    
+
     @foreach ($prices as $price)
         <div class="price_list_detail">
             <div class="bottom_line">
                 <span class="description">{{$price->service}}</span>
                 <span class="price">
-                    {{$price->price}} $
+                    <span class="{{ $price->discounts_sum > 0 ? 'crosed-text' : '' }}">
+                        {{$price->price}}
+                    </span> $ || {{ $price->discounts_sum }}% || {{ $price->discounted_price }}$
                     <img src="{{asset('public/img/check.png')}}" alt="">
                 </span>
             </div>
         </div>
-    
+
     @endforeach
     {{ $prices->links() }}
 </div>
@@ -27,7 +29,7 @@
         <div class="cards_services_line"></div>
         <span class="news_title">наши услуги-подробно</span>
     </div>
-    
+
 
 
 
@@ -87,7 +89,7 @@
         <img src="{{asset('public/img/salon-service.png')}}" alt="">
         <div class="descript">
             <h3>ПАРИКМАХЕРСКИЙ ЗАЛ</h3>
-            <span>Подходящая под образ и настроение человека причёска способна сильно преобразить его мироощущение. Так, элегантная стрижка однозначно станет заметной изюминкой вашего образа, значительно улучшив его. 
+            <span>Подходящая под образ и настроение человека причёска способна сильно преобразить его мироощущение. Так, элегантная стрижка однозначно станет заметной изюминкой вашего образа, значительно улучшив его.
             </span>
         </div>
     </div>
@@ -154,7 +156,7 @@
 </div>
 
 
-                        
+
 
 
 </div>

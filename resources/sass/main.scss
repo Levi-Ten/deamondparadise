@@ -22,20 +22,24 @@ html{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Raleway-ExtraLight"; 
- 
+    font-family: "Raleway-ExtraLight";
+
 }
 body{
   overflow-x: hidden;
- 
- 
+
+
 }
 @font-face {
-  
-  font-family: "Raleway-ExtraLight"; 
 
-  //src: url("../fonts/RalewayRegular.ttf") format("truetype"); 
-  src: url(../fonts/Raleway/static/Raleway-ExtraLight.ttf) format("truetype"); 
-  font-style: normal; 
-  font-weight: normal; 
-  } 
+  font-family: "Raleway-ExtraLight";
+
+  //src: url("../fonts/RalewayRegular.ttf") format("truetype");
+  src: url(../fonts/Raleway/static/Raleway-ExtraLight.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  }
+
+.crosed-text {
+    text-decoration: line-through;
+}
