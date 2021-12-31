@@ -38,9 +38,17 @@
         <div class="row mt-3">
             <div class="col">
                 <input name="price"
-                       value="{{ old('name', isset($price) ? $price->price : null) }}"
+                       value="{{ old('name', isset($price->discounted_price) ? $price->discounted_price : (isset($price->price) ? $price->price :null)) }}"
                        type="text" class="form-control" placeholder="price" aria-label="email">
                 @error('price')
+                <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
+            </div>
+            <div class="col">
+                <input name="discount"
+                       value="{{ old('discount', isset($price->discounts_sum) ? $price->discounts_sum : null) }}"
+                       type="text" class="form-control" placeholder="discount" aria-label="discount">
+                @error('discount')
                 <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
             </div>
@@ -54,4 +62,4 @@
 </div>
 {{-- @endsection --}}
 </body>
-</html> 
+</html>

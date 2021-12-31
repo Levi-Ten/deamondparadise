@@ -17,7 +17,7 @@
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">Id: {{$price->id}}</li>
                 <li class="list-group-item">Service: {{$price->service}}</li>
-                <li class="list-group-item">Price: {{$price->price}}</li>
+                <li class="list-group-item">Price: {{$price->discounted_price ?: $price->price}}</li>
                 <li class="list-group-item">Created: {{$price->created_at->format('d/m/y H:i:s')}}</li>
                 @if($price->updated_at != null)
                     <li class="list-group-item">Updated: {{$price->updated_at->format('d/m/y H:i:s')}}</li>

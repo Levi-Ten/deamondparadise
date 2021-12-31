@@ -16,7 +16,7 @@
         @endisset
         <div class="row">
             <div class="col">
-                <input 
+                <input
                 name="title"
                 maxlength="50"
                 value="{{ old('title', isset($news->id) ? $news->title : null) }}"
@@ -28,7 +28,7 @@
                        name="description"
                        type="text" class="form-control" placeholder="description" aria-label="name" required>
                        {{ old('description', isset($news->id) ? $news->description : null) }}
-                    
+
                     </textarea>
                 @error('description')
                     <div class="alert alert-danger">{{ $message }}</div>
@@ -36,8 +36,8 @@
             </div>
         </div>
         <div class="row mt-3">
-        <input name="image" 
-        
+        <input name="image"
+
                preview-target-id="preview_1"
                type="file">
                <img id="blah" src="#" alt="" />

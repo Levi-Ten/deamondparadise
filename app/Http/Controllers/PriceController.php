@@ -80,7 +80,6 @@ class PriceController extends Controller
     public function edit(Price $price)
     {
         return view('admin.form', compact('price'));
-
     }
 
     /**
@@ -92,6 +91,12 @@ class PriceController extends Controller
      */
     public function update(UpdatePriceRequest $request, Price $price)
     {
+//        $price->discounts()->detach();
+//        $price->discounts()->attach($request->get('discount'));
+        $discount = $request->get('discount');
+        if ($discount) {
+            $price->discounts()->sync($discount);
+        }
         $price->update($request->only(['service', 'price']));
         return redirect()->route('prices.index')->withSuccess('Updated price ' . $price->service);
     }

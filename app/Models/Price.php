@@ -27,7 +27,14 @@ class Price extends Model
 
     public function getDiscountedPriceAttribute()
     {
-//        dd($this->price);
         return $this->price - ($this->price * ($this->discounts_sum / 100));
+    }
+
+    public static function boot()
+    {
+        parent::boot();
+        self::deleting(function ($service) {
+            $service->discounts()->detach();
+        });
     }
 }

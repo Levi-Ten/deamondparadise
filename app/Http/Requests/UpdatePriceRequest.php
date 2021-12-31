@@ -26,6 +26,7 @@ class UpdatePriceRequest extends FormRequest
         return [
             'service' => 'required',
             'price' => 'required',
+            'discount' => 'required',
         ];
     }
 }
