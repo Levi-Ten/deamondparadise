@@ -21,7 +21,6 @@
                   {{ Session::get('fail') }}
                </div>
             @endif
-  
            @csrf
               <div class="form-group">
                  <label>Email</label>
