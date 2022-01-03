@@ -13,7 +13,7 @@
     <title>Салон красоты в центре Москвы | makeup, чистка лица, парикмахерская.</title>
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('public/img/icons.png')}}">
     {{-- <link rel="shortcut icon" href="{{ url('public/img/icons.png') }}"> --}}
-    <link rel="stylesheet" href="{{ asset("/css/app.css") }}">
+    <link rel="stylesheet" href="{{ asset("public/css/app.css") }}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
 </head>
