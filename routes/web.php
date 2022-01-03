@@ -27,7 +27,7 @@ Route::get('/contacts', function () {
     return view('site/contacts');
 });
 Route::get('admin', function () {
-    return view('auth.register');
+    return view('auth.login');
 });
 Route::post('/auth/save',[MainController::class, 'save'])->name('auth.save');
 Route::post('/auth/check',[MainController::class, 'check'])->name('auth.check');
