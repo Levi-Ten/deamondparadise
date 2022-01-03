@@ -47,6 +47,7 @@
               <button type="submit" class="btn btn-block btn-primary mt-3">Sign Up</button>
               <br>
               <br>
+              
               <a href="{{ route('auth.register') }}">I already have an account, sign in</a>
            </form>
       </div>
