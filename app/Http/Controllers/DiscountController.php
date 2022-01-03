@@ -6,6 +6,7 @@ use App\Http\Requests\SetMultipleDiscountsRequest;
 use App\Http\Requests\StoreDicountRequest;
 use App\Models\Discount;
 use App\Models\Price;
+
 use Illuminate\Http\Request;
 
 class DiscountController extends Controller
