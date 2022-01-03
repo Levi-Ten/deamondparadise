@@ -13,7 +13,7 @@
     <h3>{{ $price->service }}</h3>
     {{ $price->price }} -
     {{--    @foreach($price->discounts as $discount)--}}
-    <strong> {{ $price->discounts_sum_discount }} %</strong>
+    <strong>{{ $price->discounts_sum_discount }} %</strong>
     {{--    @endforeach--}}
     <hr>
 @endforeach

@@ -1,7 +1,6 @@
 @import 'variabless';
 
 .logo-main{
-
     background-image: url(../img/logo.png);
     background-size: cover;
     width: 150px;
@@ -27,11 +26,9 @@
     z-index: 999;
     width: 300px;
     height: 100%;
-    // background-color: rgba(242, 242, 242, 0.5);
     background-color: rgba(163, 162, 162, 0.5);
     display: flex;
     flex-direction: column;
-    // justify-content: center;
     align-items: center;
     transition: .8s;
     @include bracpoint(lg){
@@ -120,15 +117,10 @@
     }
     &_link{
         text-decoration: none;
-        // color: #373737;
-        //color: #ba7436;
         color: #211f22;
-        //color: #d32b8f65;
-     
         text-shadow: 0px 0px 20px #3b3232;
         &:hover{
-            color: #ba7436;
-            
+            color: #ba7436;    
         }
         
     }
@@ -136,7 +128,6 @@
         text-decoration: none;
         color: #211f22;
         text-shadow: 0px 0px 20px #3b3232;
-
         animation: colors 2s infinite linear;
         animation-direction: alternate-reverse;
     }
@@ -153,17 +144,14 @@
     }
     
   }
-
 @keyframes colors{ 
     0%{ 
-        // color: #c96981;
         color: #d6a274;
     }
     50%{
         color: #ba7436;
     }
     100%{ 
-        // color: #ba7436;
         color: #cc986a;
     }
 }

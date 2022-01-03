@@ -1,9 +1,6 @@
-//@import url('https://fonts.googleapis.com/css2?family=Fruktur&display=swap');
-//@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
 html{
     overflow-x: hidden;
     overflow-y:scroll;
-    // background-color: #e9e8e8;
     ::-webkit-scrollbar {
         width: 10px;
         background-color: #f9f9fd;
@@ -23,23 +20,14 @@ html{
     padding: 0;
     box-sizing: border-box;
     font-family: "Raleway-ExtraLight";
-
 }
 body{
   overflow-x: hidden;
-
-
 }
 @font-face {
-
   font-family: "Raleway-ExtraLight";
-
-  //src: url("../fonts/RalewayRegular.ttf") format("truetype");
   src: url(../fonts/Raleway/static/Raleway-ExtraLight.ttf) format("truetype");
   font-style: normal;
   font-weight: normal;
   }
 
-.crosed-text {
-    text-decoration: line-through;
-}

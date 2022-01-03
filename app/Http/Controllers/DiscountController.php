@@ -62,6 +62,10 @@ class DiscountController extends Controller
         foreach ($services as $service) {
             $wanted_discount = Discount::find($request->get('discount'))->discount;
             $wanted_discount_sum = $service->discounts_sum + $wanted_discount;
+            
+            if ($service->discounts_sum=null) {
+                echo"нет скидки";
+            }
             $service_discount_sum = $wanted_discount_sum < Discount::MAX_DISCOUNT_VALUE ? $wanted_discount : 99;
             if ($service->discounts_sum <= $max_discount_value && $service_discount_sum < $max_discount_value) {
                 $discount = Discount::find($request->get('discount'));

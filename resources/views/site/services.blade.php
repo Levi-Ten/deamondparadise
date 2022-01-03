@@ -13,8 +13,14 @@
                 <span class="description">{{$price->service}}</span>
                 <span class="price">
                     <span class="{{ $price->discounts_sum > 0 ? 'crosed-text' : '' }}">
-                        {{$price->price}}
-                    </span> $ || {{ $price->discounts_sum }}% || {{ $price->discounted_price }}$
+                        {{$price->price}}$ 
+                    </span> 
+                    <span class="{{ $price->discounts_sum <=0 ? 'remove' : '' }}">
+                        <span class="sale">скидка 
+                        {{ $price->discounts_sum }}
+                         %</span>  
+                        {{ $price->discounted_price }}$
+                    </span>
                     <img src="{{asset('public/img/check.png')}}" alt="">
                 </span>
             </div>
@@ -23,17 +29,10 @@
     @endforeach
     {{ $prices->links() }}
 </div>
-
-
     <div class="services">
         <div class="cards_services_line"></div>
         <span class="news_title">наши услуги-подробно</span>
     </div>
-
-
-
-
-
 <div class="block_serv">
 <div class="block_serv_menu">
         <span class="btn active" data-tab="#tab_1">
@@ -53,7 +52,6 @@
             MAKE UP
         </span>
 </div>
-
 {{-- --------------------------------- --}}
 
 <div class="block_desc active" id="tab_1">
@@ -77,8 +75,6 @@
     <li>дизайн ногтей</li>
     <li>медицинский педикюр</li>
 </ul>
-
-
 </div>
 </div>
 </div>
@@ -154,11 +150,6 @@
         </div>
         </div>
 </div>
-
-
-
-
-
 </div>
 </div>
 <div class="shadow_bottom shadow_service"></div>
