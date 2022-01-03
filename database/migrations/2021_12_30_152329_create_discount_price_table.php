@@ -18,7 +18,6 @@ class CreateDiscountPriceTable extends Migration
             $table->foreignId('discount_id')->constrained();
             $table->foreignId('price_id')->constrained()->onDelete('cascade');
             $table->timestamps();
-            
         });
     }
 
