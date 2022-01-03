@@ -21,12 +21,12 @@
                        <tr>
                          <th scope="row">
                            <a href="{{ route('prices.show', $price) }}">
-                              {{ $price->service }} 
+                              {{ $price->service }}
                            </a>
                          </th>
                          <td>
                            <a href="{{ route('prices.show', $price) }}">
-                              {{ $price->price }} 
+                              {{ $price->discounted_price }}
                            </a>
                          </td>
                          <td>
@@ -42,7 +42,7 @@
                        </tr>
                        @endforeach
                      </tbody>
-                  </table>  
+                  </table>
             </div>
          </div>
     </div>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\DiscountController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\PriceController;
@@ -37,8 +38,14 @@ Route::group(['middleware'=>['AuthCheck']], function(){
     Route::get('/auth/login',[MainController::class, 'login'])->name('auth.login');
      Route::get('/auth/register',[MainController::class, 'register'])->name('auth.register');
      Route::resource('prices', PriceController::class);
-     Route::get('/admin/settings',[MainController::class,'settings']); 
-     Route::resource('/admin/news', NewsController::class);
+     Route::get('/admin/settings',[MainController::class,'settings']);
+//     Route::resource('/admin/news', NewsController::class);
+    Route::get('/service-discount', [DiscountController::class, 'createServiceDiscount'])->name('service.discount');
+    Route::post('/multiple-discount', [DiscountController::class, 'setMultipleDiscounts'])->name('multiple.discount');
+    Route::resources([
+        '/admin/news' => NewsController::class,
+        'discounts' => DiscountController::class,
+    ]);
      Route::get('/admin/staff',[MainController::class,'staff']);
 });
 
