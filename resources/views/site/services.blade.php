@@ -13,13 +13,13 @@
                 <span class="description">{{$price->service}}</span>
                 <span class="price">
                     <span class="{{ $price->discounts_sum > 0 ? 'crosed-text' : '' }}">
-                        {{$price->price}}$ 
+                        {{$price->price}} ₽
                     </span> 
                     <span class="{{ $price->discounts_sum <=0 ? 'remove' : '' }}">
                         <span class="sale">скидка 
                         {{ $price->discounts_sum }}
                          %</span>  
-                        {{ $price->discounted_price }}$
+                        {{ $price->discounted_price }} ₽
                     </span>
                     <img src="{{asset('public/img/check.png')}}" alt="">
                 </span>
