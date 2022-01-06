@@ -18,19 +18,14 @@
                     <span>читать эту статью</span>
                 </div>
              </div>
-           
             <div class="news_description">
                 <p>{{ substr($news->title, 0, 100) }}</p>
                 <span class="news_description"> 
                     {{ substr($news->description, 0, 250) }}
-                  
-                       
-                    </span>
+                </span>
             </div>
-     
         </div>
     </a>
-    @endforeach
-    
+    @endforeach   
 </div>
 <div class="shadow_bottom"></div>

@@ -37,7 +37,10 @@
 </div>
 
 <div class="box_share">
-    <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button_count&size=small&width=145&height=20&appId" width="145" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+    <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdeamondparadise.ru%2F&layout=button&size=small&width=103&height=20&appId" 
+        width="103" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" 
+        allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+    </iframe>
 </div>
 {{-- {{ dd($news)}} --}}
 <div class="recom_title">
@@ -49,11 +52,9 @@
     <a href="{{ route('news.detailNews', $news) }}" class="achor_news">
     <div class="recommended_news">
        
-        <div class="recommended_news_top">
-
-       
+<div class="recommended_news_top">
     <div class="recommended_news_title">
-        {{ substr($news->title, 0, 50) }} 
+        {{ substr($news->title, 0, 100) }} 
     </div>
     <div class="recommended_news_desc">
         {{ substr($news->description, 0, 250) }}

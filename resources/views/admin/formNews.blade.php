@@ -16,12 +16,11 @@
         @endisset
         <div class="row">
             <div class="col">
-               <label for="title">maximum number of characters 50</label>
+               <label for="title">maximum number of characters 100</label>
                 <input 
                 name="title"
                 value="{{ old('title', isset($news) ? $news->title : null)}}"
-                maxlength="50"
-               
+                maxlength="100" 
                 type="text" class="form-control" placeholder="title news" aria-label="name" required>
                 @error('title')
                 <div class="alert alert-danger">{{ $message }}</div>
