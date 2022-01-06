@@ -36,7 +36,7 @@
               <br>
               <br>
               
-              <a href="{{ route('auth.register') }}" class="mt-3">I don't have an account, create new</a>
+              {{-- <a href="{{ route('auth.register') }}" class="mt-3">I don't have an account, create new</a> --}}
            </form>
       </div>
    </div>
