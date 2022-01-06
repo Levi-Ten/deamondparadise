@@ -3,7 +3,7 @@
                       <h4>Services</h4>
                    @endsection
                      @section('service')
-                       <li><a href="/admin/news">News</a></li>
+                       <li><a href="/admin/news" class="text-decoration-none">News</a></li>
                      @endsection
                      @include('admin.headAdmin')
                    <a class="btn btn-primary mb-3 mt-3" role="button" href="{{ route('prices.create') }}">Create Service</a> <br>
@@ -20,12 +20,12 @@
                         @foreach ($prices as $price)
                        <tr>
                          <th scope="row">
-                           <a href="{{ route('prices.show', $price) }}">
+                           <a href="{{ route('prices.show', $price) }}" class="text-decoration-none">
                               {{ $price->service }}
                            </a>
                          </th>
                          <td>
-                           <a href="{{ route('prices.show', $price) }}">
+                           <a href="{{ route('prices.show', $price) }}" class="text-decoration-none">
                               {{ $price->discounted_price }}
                            </a>
                          </td>

@@ -10,10 +10,9 @@
 <body>
 
 @section('title', isset($price) ? 'Update '.$price->service : 'Create user')
-
 {{-- @section('content') --}}
 <div class="container w-50">
-    <a type="button" class="btn btn-secondary" href="{{ route('prices.index') }}">Back to all services</a>
+    <a type="button" class="btn btn-secondary mt-4" href="{{ route('prices.index') }}">Back to all services</a>
     <form method="POST"
           @if(isset($price))
           action="{{ route('prices.update', $price) }}"
@@ -27,6 +26,7 @@
         @endisset
         <div class="row">
             <div class="col">
+                <label for="service" class="mb-2">услуга</label>
                 <input name="service"
                        value="{{ old('name', isset($price) ? $price->service : null) }}"
                        type="text" class="form-control" placeholder="service" aria-label="name">
@@ -37,6 +37,7 @@
         </div>
         <div class="row mt-3">
             <div class="col">
+                <label for="price" class="mb-2">стоимость услуги</label>
                 <input name="price"
                        value="{{ old('name', isset($price->discounted_price) ? $price->discounted_price : (isset($price->price) ? $price->price :null)) }}"
                        type="text" class="form-control" placeholder="price" aria-label="email">
@@ -45,9 +46,13 @@
                 @enderror
             </div>
             <div class="col">
+                <label for="discount" class="mb-2">скидка %</label>
                 <input name="discount"
+                        {{-- class="discount" --}}
                        value="{{ old('discount', isset($price->discounts_sum) ? $price->discounts_sum : null) }}"
                        type="text" class="form-control" placeholder="discount" aria-label="discount">
+                       {{-- <input type="checkbox" id="checkbox" name="checkbox" /> --}}
+                   
                 @error('discount')
                 <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
@@ -60,6 +65,9 @@
         </div>
     </form>
 </div>
+
 {{-- @endsection --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="{{ asset("js/admin.js") }}"></script>
 </body>
 </html>

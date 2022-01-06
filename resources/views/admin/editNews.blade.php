@@ -1,7 +1,6 @@
 @include('admin.headEdit')
 <div class="container w-50">
-    <a type="button" class="btn btn-secondary" href="{{ route('news.index') }}">Back to all news</a>
-
+    <a type="button" class="btn btn-secondary mt-5" href="{{ route('news.index') }}">Back to all news</a>
     <form method="POST"
           enctype="multipart/form-data"
           @if(isset($news))

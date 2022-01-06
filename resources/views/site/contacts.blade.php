@@ -10,7 +10,7 @@
             <label for="email"></label>
             <input class="email" type="email" name="email" placeholder="ЭЛЕКТРОННАЯ ПОЧТА (ДОПОЛНИТЕЛЬНО)">
             <label for="text"></label>
-            <input class="email" type="text" name="teleph" placeholder="НОМЕР ТЕЛЕФОНА" required>
+            <input class="email" type="number" name="teleph" placeholder="НОМЕР ТЕЛЕФОНА" required>
             <label for="textarea"></label>
          </div>
          <div class="form_bottom">

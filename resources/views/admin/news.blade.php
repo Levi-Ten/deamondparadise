@@ -3,7 +3,7 @@
                        <h4>News</h4>
                    @endsection
                    @section('news')
-                   <li><a href="/prices">Services</a></li>
+                   <li><a href="/prices" class="text-decoration-none">Services</a></li>
                    @endsection
                @include('admin.headAdmin')
               
@@ -22,17 +22,17 @@
                      @foreach ($news as $news)
                     <tr>
                      <td scope="row">
-                        <a href="{{ route('news.show', $news) }}">
+                        <a href="{{ route('news.show', $news) }}" class="text-decoration-none">
                            {{ $news->title }} 
                         </a>
                       </td>
                       <td scope="row">
-                        <a href="{{ route('news.show', $news) }}">
+                        <a href="{{ route('news.show', $news) }}" class="text-decoration-none">
                            {{ $news->description }}
                         </a>
                       </td>
                       <td>
-                        <a href="{{ route('news.show', $news) }}">
+                        <a href="{{ route('news.show', $news) }}" class="text-decoration-none">
                            {{ $news->image }} 
                            <img 
                            src="{{ asset('public/images/' . $news->image) }}" 

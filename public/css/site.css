@@ -338,18 +338,6 @@
   transition: 0.5s;
 }
 
-.shadow_bottom {
-  margin-left: 300px;
-  width: 100%;
-  height: 0.1px;
-  box-shadow: 50px 18px 100px 100px #96807f;
-}
-@media (max-width: 992px) {
-  .shadow_bottom {
-    margin-left: 0;
-  }
-}
-
 .container_line {
   width: 100%;
   height: 100%;
@@ -1278,7 +1266,6 @@
 }
 
 .news_description {
-  margin-top: -100px;
   width: 100%;
   padding: 20px;
   color: black;

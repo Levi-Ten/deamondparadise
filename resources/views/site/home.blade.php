@@ -158,7 +158,7 @@
     <a href="{{ route('news.detailNews', $news) }}">
     <div class="read_more">
     <div class="read_more_text">
-        <span>read this article</span>
+        <span>подробнее</span>
     </div>
 </div>
 </a>

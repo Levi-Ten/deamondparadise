@@ -25,7 +25,7 @@ class SetMultipleDiscountsRequest extends FormRequest
     {
         return [
             'services' => 'required',
-            'discount' => 'required',
+            // 'discount' => 'required',
         ];
     }
 }

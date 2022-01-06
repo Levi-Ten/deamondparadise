@@ -20,7 +20,7 @@
              </div>
            
             <div class="news_description">
-                <p>{{ substr($news->title, 0, 50) }}</p>
+                <p>{{ substr($news->title, 0, 100) }}</p>
                 <span class="news_description"> 
                     {{ substr($news->description, 0, 250) }}
                   

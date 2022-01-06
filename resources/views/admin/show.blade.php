@@ -12,7 +12,7 @@
 
 <div class="p-3">
     @section('content')
-        <a type="button" class="btn btn-secondary" href="{{ route('prices.index') }}">Back to all services</a>
+        <a type="button" class="btn btn-secondary mt-5" href="{{ route('prices.index') }}">Back to all services</a>
         <div class="card mt-3" style="width: 18rem;">
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">Id: {{$price->id}}</li>

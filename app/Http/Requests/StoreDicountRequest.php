@@ -24,7 +24,7 @@ class StoreDicountRequest extends FormRequest
     public function rules()
     {
         return [
-            'discount' => 'integer|required',
+            // 'discount' => 'integer|required',
         ];
     }
 }
