@@ -29,4 +29,11 @@ class UpdatePriceRequest extends FormRequest
             // 'discount' => 'required',
         ];
     }
+    
+    public function messages()
+    {
+        return [
+          'discount.digits_between' => 'Discount must be between 0 and 99' 
+        ];
+    }
 }

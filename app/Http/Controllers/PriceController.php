@@ -91,15 +91,18 @@ class PriceController extends Controller
      */
     public function update(UpdatePriceRequest $request, Price $price)
     {
-//        $price->discounts()->detach();
-//        $price->discounts()->attach($request->get('discount'));
-        $discount = $request->get('discount');
-        if ($discount) {
-            $price->discounts()->sync($discount);
-        }
-        $price->update($request->only(['service', 'price']));
-        return redirect()->route('prices.index')->withSuccess('Updated price ' . $price->service);
-    }
+        //        $price->discounts()->detach();
+        //        $price->discounts()->attach($request->get('discount'));
+                $discount = $request->get('discount');
+                if ($discount > 0) {
+                    $price->discounts()->sync($discount);
+                }
+                if ($discount == 0 && $price->discounts()->exists()) {
+                    $price->discounts()->detach();
+                }
+                $price->update($request->only(['service', 'price']));
+                return redirect()->route('prices.index')->withSuccess('Updated price ' . $price->service);
+            }
 
     /**
      * Remove the specified resource from storage.

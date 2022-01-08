@@ -77,13 +77,12 @@ class NewsController extends Controller
 
     } 
     public function detailNews(News $news)
-    { 
-     $newsRec = News::orderBy('created_at')->take(2)->get();
-    
-        return view('site.detailNews', compact('news', 'newsRec'));
-       
+    {
+        //$newsRec = News::whereNotIn('id', [$news->id])->orderBy('created_at')->take(2)->get();
+        $recentNews = News::whereNotIn('id', [$news->id])->latest()->take(2)->get();
+        return view('site.detailNews', compact('news', 'recentNews'));    
         // return view('site.news', compact('news'));
-    }
+        }
     /**
      * Show the form for editing the specified resource.
      *

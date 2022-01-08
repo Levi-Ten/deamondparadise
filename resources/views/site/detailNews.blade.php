@@ -48,7 +48,7 @@
     <span class="news_title">похожие новости</span>
 </div>
 
-    @foreach ($newsRec as $news)
+@foreach($recentNews as $news)
     <a href="{{ route('news.detailNews', $news) }}" class="achor_news">
     <div class="recommended_news">
        
