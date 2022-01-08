@@ -59,7 +59,7 @@
         <div class="cards_services_line"></div>
         <span>наши предложения</span>
     </div>
-    <div class="card">
+    <div class="card" data-aos="fade-right">
         <div class="card_images">
             <img src="{{asset('public/img/makeup.jpeg')}}" alt="makeup photo girl">
         </div>
@@ -80,7 +80,7 @@
         </div>
     </div>
 {{-- ---------------------------- --}}
-    <div class="card">
+    <div class="card" data-aos="fade-left">
         <div class="card_images">
             <img src="{{asset('public/img/stylist-services2.jpeg')}}" alt="stylist services">
         </div>
@@ -102,7 +102,7 @@
     </div>
     
 {{-- ------------------------------------- --}}
-    <div class="card">
+    <div class="card" data-aos="fade-right">
         <div class="card_images">
             <img src="{{asset('public/img/coloring.jpeg')}}" alt="">
         </div>
@@ -137,7 +137,7 @@
   
      
     @foreach ($news as $news) 
-    <div>
+    <div data-aos="flip-right">
        
        <div class="home_news_image">
         <a href="{{ route('news.detailNews', $news) }}">

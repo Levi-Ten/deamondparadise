@@ -14,10 +14,12 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset("public/favicon.ico") }}">
     <link rel="stylesheet" href="{{ asset("public/css/app.css") }}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-
 </head>
 <body>
     @include('templates.main-sidebar')
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="{{ asset("public/js/mobile-menu.js") }}"></script>
 </body>
 </html>

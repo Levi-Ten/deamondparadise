@@ -21,7 +21,6 @@ menuIcon.addEventListener('click', ()=> {
 navbar.classList.toggle('change');
 })
 
-console.log('hello')
 const wrapper = document.querySelector(".wrapper");
 window.addEventListener("scroll", checkScroll);
 document.addEventListener("DOMContentLoaded", checkScroll);
@@ -41,8 +40,6 @@ function checkScroll() {
         wrapper.classList.remove('color2');
     }
 }
-
-console.log('hello')
 
 // var slideIndex = 0;
 // showSlides();
@@ -74,7 +71,6 @@ for(let i = 0; i < menuLength; i++) {
     }
 }
 
-console.log('hello')
 
 const tabsBtn = document.querySelectorAll(".btn");
 const tabsItems = document.querySelectorAll(".block_desc");
@@ -106,6 +102,14 @@ window.onload = function(){
         return false;
     };
 };
+// -------------------------------
+  AOS.init({
+    offset: 150,
+    duration: 500,
+    easing: "ease-in-sine",
+    delay: 100,
+  });
+
 
 
 
